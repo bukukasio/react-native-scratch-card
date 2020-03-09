@@ -34,12 +34,12 @@ class RNScratchCardView extends Component {
       }
     }
     if (data.value >= 100) {
-      DeviceEventEmitter.removeAllListeners()
+      DeviceEventEmitter.removeListener('percentEv')
     }
   }
 
   componentWillUnmount = () => {
-    DeviceEventEmitter.removeAllListeners()
+    DeviceEventEmitter.removeListener('percentEv')
   }
 
   render() {
